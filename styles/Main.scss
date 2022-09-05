@@ -1,0 +1,116 @@
+/* FIRST SECTION */
+.front-c {
+    background-color: #A4CDD6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+}
+
+.front-diver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fs-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.diver {
+    animation: diveranimation 6s alternate infinite;
+}
+/* TURN IMAGE */
+
+.flip-h {
+    transform: scaleY(-1);
+    transform: rotate(180deg);
+  }
+
+/* YOUTUBE EMBED */
+  
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+  
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* LOGO */
+
+.logo {
+    position: absolute;
+    top: 0rem;
+    /* left: .5rem; */
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: #CFF0F8;
+    /* background-color: #F36116; */
+}
+
+.logo::before {
+    content: "";
+    /* background-image: url(/images/ScubaFunLogo.svg); */
+    background-image: url(/images/ScubaFunLogo.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(52, 150, 249, 0.4);
+    /* background-color: rgba(52, 150, 249, 0.745); */
+    bottom: 0;
+    left: -50%;
+    border-radius: 35%;
+    animation: waves 5s ease-in-out alternate infinite;
+}
+
+.headerBorderb {
+    border-bottom: 1px solid rgba(52, 150, 249, 0.4);
+}
+
+.nextui-navbar-container {
+    backdrop-filter: none !important;
+    background: #CFF0F8 !important;
+}
+
+.nextui-navbar-link {
+    font-weight: bold !important;
+}
+
+
+@keyframes waves {
+    to {
+        transform: translateY(-50%) rotate(540deg);
+    }
+}
+
+@keyframes diveranimation {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-2.5rem); }
+    100% { transform: translateY(0); }
+}

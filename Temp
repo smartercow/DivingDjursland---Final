@@ -1,0 +1,83 @@
+return (
+    <div>
+      <Text className="my-3 font-bold">Forside video</Text>
+      <Grid>
+        <Card variant="bordered">
+          <Card.Body>
+            <Grid className="flex flex-col gap-3">
+
+            </Grid>
+          </Card.Body>
+        </Card>
+      </Grid>
+    </div>
+  );
+
+  flex justify-between gap-3 flex-col md:flex-row sm:flex-row md:gap-[20%]
+
+
+  <Card variant="bordered">
+    <Card.Header>
+    <Text h4>Om os</Text>
+    </Card.Header>
+    <Card.Divider></Card.Divider>
+    <Card.Body>
+      <OmOs />
+    </Card.Body>
+  </Card>
+
+ 
+    docsSnap.forEach(doc => {
+      console.log(doc.data())
+    }) 
+
+    useEffect(() => {
+      const UserDBData = collection(firestore, "Users");
+     const getUser = async () => {
+       
+       const data = await getDocs(UserDBData)
+       setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+     };
+     getUser()
+     console.log(users);
+     if(users)
+   }, []) 
+
+
+
+     const getUsers = async () => {
+    const data = await getDocs(usersDB);
+    setUserData(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+
+  const currentUserIsAdmin = userData.find(doc => doc.id === user.iud)?.isAdmin;
+
+  console.log(currentUserIsAdmin);
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+     useEffect(() => {
+    if (foundUser) {
+      console.log("Working!")
+  
+    } else {
+      console.log("Not working")
+    } 
+  }, []); */
+  
+
+  if(foundUser.isAdmin = false) {
+    console.log("Got it");
+  } else {
+    console.log("Nope");
+  } 
+
+
+   if (userData.find((item) => (item.id === user.uid))) {
+    console.log("Working!")
+    foundUser.isAdmin = false
+
+  } else {
+    console.log("Not working")
+  } 

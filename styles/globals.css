@@ -1,0 +1,25 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+/* @layer components {
+    .navBtn {
+      @apply hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out
+    }
+  
+    .btn {
+      @apply h-7 hover:scale-125 cursor-pointer transition-all duration-150 ease-out
+    }
+    
+  } */
+
+.bg-gradient {
+  background: rgb(235,251,255);
+  background: linear-gradient(90deg, rgba(235,251,255,1) 44%, rgba(255,255,255,1) 100%);
+}
+
